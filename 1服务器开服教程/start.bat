@@ -1,0 +1,2 @@
+@echo off
+powershell -NoProfile -ExecutionPolicy Bypass -Command "Set-Location 'C:\DedicatedServer\bin\Win64_Shipping_Server'; New-Item -ItemType Directory -Force 'C:\DedicatedServer\bin\Win64_Shipping_Server\logs' | Out-Null; ./DedicatedCustomServer.Starter.exe /dedicatedcustomserverconfigfile 'C:\DedicatedServer\Modules\Native\myserver_config.txt' /LogOutputPath 'C:\DedicatedServer\bin\Win64_Shipping_Server\logs' /tickrate 60 /DisableErrorReporting _MODULES_*Native*Multiplayer*_MODULES_"

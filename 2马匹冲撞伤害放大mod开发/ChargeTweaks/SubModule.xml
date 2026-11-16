@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Module>
+    <Name value="ChargeTweaks"/>
+    <Id value="ChargeTweaks"/>
+    <Version value="v1.1.0"/>
+    <ModuleCategory value="Server"/>
+    <DependedModules>
+        <DependedModule Id="Native"/>
+        <DependedModule Id="Multiplayer"/>
+    </DependedModules>
+    <SubModules>
+        <SubModule>
+            <Name value="ChargeTweaks"/>
+            <DLLName value="ChargeTweaks.dll"/>
+            <SubModuleClassType value="ChargeTweaks.ChargeTweaksSubModule"/>
+            <Tags/>
+        </SubModule>
+    </SubModules>
+</Module>

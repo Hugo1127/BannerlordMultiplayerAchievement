@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  骑砍2 服务端模组：骑乘冲撞伤害倍率（v1.1.0）
+
+  核心思路：只放大「玩家骑的马」撞人的伤害，AI 骑兵保持原版，
+  并给每秒放大次数设上限 —— 目的是压低单位时间内的击杀/重生事件密度。
+
+  改完后重启服务器（或换图）生效，不需要重新编译。
+  旧配置（只有 <Multiplier>）仍然兼容：此时玩家与 AI 使用同一个倍率。
+-->
+<ChargeTweaksConfig>
+    <!-- 玩家（真人）骑手造成的冲撞伤害倍率，必须 > 0 且 <= 1000。1.0 = 原版 -->
+    <PlayerMultiplier>20.0</PlayerMultiplier>
+
+    <!-- AI（机器人）骑手造成的冲撞伤害倍率。1.0 = 与原版一致（推荐，调这个最省事） -->
+    <BotMultiplier>1.0</BotMultiplier>
+
+    <!-- 友军被撞时是否也放大（默认 false；开友伤时建议保持 false） -->
+    <AffectFriendlyFire>false</AffectFriendlyFire>
+
+    <!-- 每秒最多放大多少次冲撞；超过的冲撞按原版伤害结算。0 = 不限制（默认 8） -->
+    <MaxEmpoweredHitsPerSecond>8</MaxEmpoweredHitsPerSecond>
+
+    <!-- 放大后的单次伤害上限；0 = 不限制（默认 0） -->
+    <MaxDamage>0</MaxDamage>
+
+    <!-- 调试：每次放大在服务器控制台打印一行伤害日志（排查问题时可临时改为 true） -->
+    <LogDamage>false</LogDamage>
+</ChargeTweaksConfig>
